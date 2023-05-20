@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "vk",
+      "address": "abc",
+      "city": "Surat",
+      "state": "Gujarat",
+      "country": "India"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

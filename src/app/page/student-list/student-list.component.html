@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <h3  class="text-uppercase bg-primary text-center p-2">Details</h3>
+        <app-student-detail  (emmitStudentData)="studentData($event)" [singleStudentdata]="singleStudent" (emmitupdatedStudentData)="updatedData($event)"></app-student-detail>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8 offset-2">
+        <h2 class="text-uppercase bg-primary text-center p-2">List of Student</h2>
+        <table class="table table-borderd">
+            <thead>
+                <tr>
+                    <th>StudentNo</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of studentlistData; let i = index;">
+                    <td>{{i + 1}}</td>
+                    <td>
+                        {{list.name}}
+                    </td>
+                    <td>{{list.address}}</td>
+                    <td>{{list.city}}</td>
+                    <td>{{list.state}}</td>
+                    <td>{{list.country}}</td>
+                    <td><button class="btn btn-danger" (click)="onEditstudentList(list)">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<app-remove-dubplicate></app-remove-dubplicate>
